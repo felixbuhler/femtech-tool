@@ -9,7 +9,21 @@ import { setColor, colorFront, colorBack } from "./modules/sketch/color.js";
 // Variables
 
 let valueObjectBlur = elementObjectBlur.value;
+let noiseLayer;
 
+// Noise Generator
+
+function generateNoise(pg) {
+    pg.loadPixels();
+    for (let i = 0; i < pg.pixels.length; i += 4) {
+        let val = random(255);
+        pg.pixels[i] = val;
+        pg.pixels[i + 1] = val;
+        pg.pixels[i + 2] = val;
+        pg.pixels[i + 3] = 24;
+    }
+    pg.updatePixels();
+}
 
 // Setup Scene
 
@@ -17,7 +31,7 @@ function setup() {
 
     // Set low Framerate for GUI Performance
 
-    frameRate(12);
+    frameRate(8);
 
     // Init Canvas
 
@@ -33,6 +47,11 @@ function setup() {
 
     window.addEventListener('resize', resizeSelection);
     elementAspectRatio.addEventListener('change', resizeSelection);
+
+    // Noise
+
+    noiseLayer = createGraphics(windowWidth, windowHeight);
+    noiseLayer.clear();
 }
 
 // Draw Scene
@@ -61,6 +80,11 @@ function draw() {
 
     valueObjectBlur = parseFloat(elementObjectBlur.value);
     filter(BLUR, valueObjectBlur);
+
+    // Noise
+
+    generateNoise(noiseLayer);
+    image(noiseLayer, 0, 0);
 }
 
 window.setup = setup;
