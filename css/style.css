@@ -71,7 +71,8 @@ main {
 
 
 #visual-canvas canvas {
-    border-radius: var(--border-radius); box-shadow: 0px 0px 3px rgba(255,255,255,0.1),  0px 0px 10px rgba(255,255,255,0.1)
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.1), 0px 0px 10px rgba(255, 255, 255, 0.1)
 }
 
 
@@ -140,10 +141,39 @@ main {
     border-radius: 5em;
 }
 
-.orange {
-    background: var(--color-orange)
-}
+@media screen and (max-width: 680px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        height: 100dvh;
+        width: 100vw;
+    }
 
-.purple {
-    background: var(--color-purple)
+
+    #gui {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        align-items: stretch;
+    }
+
+    #gui>* {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 60vw 0 0;
+    }
+
+    #gui>*:first-child {
+        flex: 1 0 0;
+    }
+
+    #gui-section label {
+        white-space: nowrap;
+    }
 }

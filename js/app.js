@@ -20,10 +20,12 @@ function generateNoise(pg) {
         pg.pixels[i] = val;
         pg.pixels[i + 1] = val;
         pg.pixels[i + 2] = val;
-        pg.pixels[i + 3] = 24;
+        pg.pixels[i + 3] = 15;
     }
     pg.updatePixels();
 }
+
+
 
 // Setup Scene
 
@@ -31,7 +33,7 @@ function setup() {
 
     // Set low Framerate for GUI Performance
 
-    frameRate(8);
+
 
     // Init Canvas
 
