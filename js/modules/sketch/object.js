@@ -13,7 +13,6 @@ function drawEllipse(x, y, width, height, color) {
     dropShadow(width, "yellow");
     fill(color);
     ellipse(x, y, width, height);
-
 }
 
 // Squircle
