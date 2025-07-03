@@ -4,13 +4,12 @@ import { resizeSelection, elementAspectRatio } from "./modules/aspectRatio.js";
 import { elementDistance, elementObjectBlur } from "./modules/gui.js";
 import { colorPurple, colorOrange } from "./modules/colors.js";
 import { selectObject } from "./modules/sketch/object.js";
+import { setColor, colorFront, colorBack } from "./modules/sketch/color.js";
 
 // Variables
 
 let valueObjectBlur = elementObjectBlur.value;
 
-let colorFront = colorPurple;
-let colorBack = colorOrange;
 
 // Setup Scene
 
@@ -39,6 +38,8 @@ function setup() {
 // Draw Scene
 
 function draw() {
+
+    setColor();
 
     // Variables
 

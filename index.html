@@ -15,7 +15,7 @@
       <!-- GUI -->
       <div id="gui">
         <h2>Visual Generator</h2>
-        <!-- Aspect Ratio-->
+        <!-- Aspect Ratio -->
         <div class="gui-section">
           <label for="aspect-ratio">Aspect Ratio</label>
           <select id="aspect-ratio" name="aspect-ratio">
@@ -36,31 +36,18 @@
         </div>
         <!-- Theme -->
         <div class="gui-section">
-          Color Theme
-
-          <input
-            type="radio"
-            id="f-purple-b-orange"
-            name="color-theme"
-            value="f-purple-b-orange"
-            checked
-          />
-          <label for="f-purple-b-orange"
-            ><span class="color-theme-background orange"
-              ><span class="color-theme-front purple"></span></span
-          ></label>
-
-          <input
-            type="radio"
-            id="f-purple-b-orange"
-            name="color-theme"
-            value="f-purple-b-orange"
-            checked
-          />
-          <label for="f-purple-b-orange"
-            ><span class="color-theme-background orange"
-              ><span class="color-theme-front purple"></span></span
-          ></label>
+          <label for="color-theme"> Color Theme</label>
+          <select id="color-theme" name="color-theme">
+            <!-- Orange On … -->
+            <option value="orange:purple">Orange on Purple</option>
+            <option value="orange:black">Orange on Black</option>
+            <option value="orange:white">Orange on White</option>
+            <!-- Purple On … -->
+            <option value="purple:orange">Purple on Orange</option>
+            <option value="neon:black">Neon on Black</option>
+            <option value="black:neon">Black on Neon</option>
+            <option value="logo">Logo</option>
+          </select>
         </div>
         <!-- Distance -->
         <div class="gui-section">

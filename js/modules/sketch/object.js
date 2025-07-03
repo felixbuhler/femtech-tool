@@ -10,7 +10,8 @@ function dropShadow(size, color) {
 // Ellipse
 
 function drawEllipse(x, y, width, height, color) {
-    dropShadow(width, "yellow");
+    noStroke();
+    dropShadow(width, color);
     fill(color);
     ellipse(x, y, width, height);
 }
@@ -21,7 +22,8 @@ function drawSquircle(x, y, width, height, color) {
 
     const borderRadius = 0.2 * Math.min(width, height);
 
-    dropShadow(width, "yellow");
+    noStroke();
+    dropShadow(width, color);
     fill(color);
     rectMode(CENTER);
     rect(x, y, width, height, borderRadius);
