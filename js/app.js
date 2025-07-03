@@ -52,13 +52,16 @@ function setup() {
 
     noiseLayer = createGraphics(windowWidth, windowHeight);
     noiseLayer.clear();
+
+    // Set Colors
+
+    setColor();
+
 }
 
 // Draw Scene
 
 function draw() {
-
-    setColor();
 
     // Variables
 

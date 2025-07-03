@@ -19,31 +19,44 @@ function getTheme(value) {
 
 console.log(getTheme(elementColorTheme.value));
 
+elementColorTheme.addEventListener('change', () => {
+    getTheme(elementColorTheme.value);
+    setColor();
+});
+
 // Set Color 
 
 export function setColor() {
-    if (getTheme(elementColorTheme.value) === "orange-purple") {
+    if (colorFront === "orange") {
         colorFront = colorOrange;
-        colorBack = colorPurple;
     }
-    else if (getTheme(elementColorTheme.value) === "orange-black") {
-        colorFront = colorOrange;
-        colorBack = colorBlack;
-    }
-    else if (getTheme(elementColorTheme.value) === "orange-white") {
-        colorFront = colorOrange;
-        colorBack = colorWhite;
-    }
-    else if (getTheme(elementColorTheme.value) === "purple-orange") {
+    else if (colorFront === "purple") {
         colorFront = colorPurple;
+    }
+    else if (colorFront === "black") {
+        colorFront = colorBlack;
+    }
+    else if (colorFront === "white") {
+        colorFront = colorWhite;
+    }
+    else if (colorFront === "neon") {
+        colorFront = colorNeon;
+    }
+
+
+    if (colorBack === "orange") {
         colorBack = colorOrange;
     }
-    else if (getTheme(elementColorTheme.value) === "neon-black") {
-        colorFront = colorNeon;
+    else if (colorBack === "purple") {
+        colorBack = colorPurple;
+    }
+    else if (colorBack === "black") {
         colorBack = colorBlack;
     }
-    else if (getTheme(elementColorTheme.value) === "black-neon") {
-        colorFront = colorBlack;
+    else if (colorBack === "white") {
+        colorBack = colorWhite;
+    }
+    else if (colorBack === "neon") {
         colorBack = colorNeon;
     }
 }

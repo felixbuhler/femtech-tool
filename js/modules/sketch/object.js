@@ -3,7 +3,7 @@
 function dropShadow(size, color) {
     drawingContext.shadowOffsetX = 0;
     drawingContext.shadowOffsetY = 0;
-    drawingContext.shadowBlur = size / 5;
+    drawingContext.shadowBlur = size / 10;
     drawingContext.shadowColor = color;
 }
 

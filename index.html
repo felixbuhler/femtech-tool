@@ -38,15 +38,44 @@
         <div class="gui-section">
           <label for="color-theme"> Color Theme</label>
           <select id="color-theme" name="color-theme">
+            <!-- Separator -->
+            <option disabled>—— Orange on</option>
             <!-- Orange On … -->
-            <option value="orange:purple">Orange on Purple</option>
-            <option value="orange:black">Orange on Black</option>
-            <option value="orange:white">Orange on White</option>
+            <option value="orange:purple">Purple</option>
+            <option value="orange:black">Black</option>
+            <option value="orange:white">White</option>
+            <!-- Separator -->
+            <option disabled></option>
+            <option disabled>—— Purple on</option>
             <!-- Purple On … -->
-            <option value="purple:orange">Purple on Orange</option>
-            <option value="neon:black">Neon on Black</option>
-            <option value="black:neon">Black on Neon</option>
-            <option value="logo">Logo</option>
+            <option value="purple:orange">Orange</option>
+            <option value="purple:white">White</option>
+            <option value="purple:black">Black</option>
+            <option value="purple:neon">Neon</option>
+            <!-- Separator -->
+            <option disabled></option>
+            <option disabled>—— Neon on</option>
+            <!-- Neon On … -->
+            <option value="neon:purple">Purple</option>
+            <option value="neon:white">White</option>
+            <option value="neon:black">Black</option>
+            <option value="neon:neon">Neon</option>
+            <!-- Separator -->
+            <option disabled></option>
+            <option disabled>—— White on</option>
+            <!-- White On … -->
+            <option value="white:purple">Purple</option>
+            <option value="white:black">Black</option>
+            <option value="white:neon">Neon</option>
+            <option value="white:orange">Orange</option>
+            <!-- Separator -->
+            <option disabled></option>
+            <option disabled>—— Black on</option>
+            <!-- Black On … -->
+            <option value="black:purple">Purple</option>
+            <option value="black:white">White</option>
+            <option value="black:neon">Neon</option>
+            <option value="black:orange">Orange</option>
           </select>
         </div>
         <!-- Distance -->
@@ -68,9 +97,9 @@
             type="range"
             id="object-blur"
             name="object-blur"
-            min="2"
+            min="3"
             max="20"
-            value="2"
+            value="3"
           />
         </div>
         <!-- Download Button-->
