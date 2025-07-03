@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Femtech Germany Visual Tools</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/p5.min.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <!-- GUI -->
+      <div id="gui">
+        <h2>Visual Generator</h2>
+        <!-- Aspect Ratio-->
+        <div class="gui-section">
+          <label for="aspect-ratio">Aspect Ratio</label>
+          <select id="aspect-ratio" name="aspect-ratio">
+            <option value="1:1">Square (1:1)</option>
+            <option value="16:9">Widescreen (16:9)</option>
+            <option value="9:16">Story (9:16)</option>
+            <option value="4:3">TV (4:3)</option>
+          </select>
+        </div>
+        <!-- Object Type -->
+        <div class="gui-section">
+          <label for="object-type">Object Type</label>
+          <select id="object-type" name="object-type">
+            <option value="ellipse">Ellipse</option>
+            <option value="squircle">Squircle</option>
+            <option value="logo">Logo</option>
+          </select>
+        </div>
+        <!-- Theme -->
+        <div class="gui-section">
+          Color Theme
+
+          <input
+            type="radio"
+            id="f-purple-b-orange"
+            name="color-theme"
+            value="f-purple-b-orange"
+            checked
+          />
+          <label for="f-purple-b-orange"
+            ><span class="color-theme-background orange"
+              ><span class="color-theme-front purple"></span></span
+          ></label>
+
+          <input
+            type="radio"
+            id="f-purple-b-orange"
+            name="color-theme"
+            value="f-purple-b-orange"
+            checked
+          />
+          <label for="f-purple-b-orange"
+            ><span class="color-theme-background orange"
+              ><span class="color-theme-front purple"></span></span
+          ></label>
+        </div>
+        <!-- Distance -->
+        <div class="gui-section">
+          <label for="distance">Distance</label>
+          <input
+            type="range"
+            id="distance"
+            name="distance"
+            min="20"
+            max="100"
+            value="20"
+          />
+        </div>
+        <!-- Object Blur -->
+        <div class="gui-section">
+          <label for="object-blur">Object Blur</label>
+          <input
+            type="range"
+            id="object-blur"
+            name="object-blur"
+            min="2"
+            max="20"
+            value="2"
+          />
+        </div>
+        <!-- Download Button-->
+        <div class="gui-section">
+          <label>Download</label>
+          <button onclick="saveImage()">⬇</button>
+        </div>
+      </div>
+
+      <!-- Canvas -->
+      <div id="visual-canvas"></div>
+    </main>
+
+    <script src="js/app.js" type="module" defer></script>
+  </body>
+</html>
